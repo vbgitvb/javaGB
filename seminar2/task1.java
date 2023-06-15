@@ -22,14 +22,13 @@ public class task1 {
         }
         
         sqlFullRequest.append(sqlRequest + " ");
-
+//remove unnecessary characters:   {} "
         for (char c : charsToRemove.toCharArray()) {
             sqlFilter = sqlFilter.replace(String.valueOf(c), "");
         }
 
         String[] dbRecord = sqlFilter.split(",");
 
-//        System.out.println(sqlFullRequest);
         for (int i = 0; i< dbRecord.length; i++) {
             String[] keyValue = dbRecord[i].trim().split(delimiter);
                 if(!(keyValue[1].equalsIgnoreCase("null"))){
