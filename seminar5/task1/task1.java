@@ -15,28 +15,18 @@ public class task1 {
 
     public static void main(String[] args) {
         
-        
         phonebook myPhBook = new phonebook();
-
-        
-        
-//        int result =  myPhBook.insert("123", "AAA aa AAA");
-  
-
-
-        // if ( == 0 ) {
-        // System.out.println("Добавлен. Result = " + result);
-        // myPhBook.printPhoneBook();
-        // }
 
         myPhBook.insert("+79181112233", "Матвеев Андрей Михайлович");
         myPhBook.insert("+79182223344", "Егоров Игорь Николаевич");
         myPhBook.insert("+79183334455", "Ильюхин Евгений Петрович");
-        //myPhBook.add("")
 
         myPhBook.printPhoneBook();
 
+        myPhBook.add("Егоров Игорь Николаевич", "+79181111111", "Служебный");
+        myPhBook.printPhoneBook();
 
-
+        myPhBook.add("Егоров Игорь Николаевич", "+79182222222", "Домашний");
+        myPhBook.printPhoneBook();
     }
 }
