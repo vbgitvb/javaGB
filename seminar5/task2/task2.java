@@ -3,7 +3,6 @@
 
 package task2;
 
-import task2.display;
 /**
  * task2
  */
@@ -16,11 +15,14 @@ public class task2 {
         int maxRndValue = 100;
 
         display.clearScreen();
+
         display.printText("Исходный массив:");
         sort.fillRandomValue(arrayOfNumber, maxRndValue);
         display.printArray(arrayOfNumber);
-        sort.heap(arrayOfNumber);
 
+        sort.heap(arrayOfNumber);
+        display.printText("Отсортированный массив:");
+        display.printArray(arrayOfNumber);
 
 
     }
